@@ -1,6 +1,8 @@
 .numbers {
     display: flex;
     flex-direction: column;
+    margin: toRem(40) 0;
+
 
     &__items {
         display: flex;
@@ -35,7 +37,6 @@
         display: flex;
         justify-content: center;
         align-items: center;
-        margin: toRem(40) 0;
     }
     .numbers__items {
         flex-direction: row;
