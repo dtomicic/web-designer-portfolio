@@ -4,27 +4,7 @@
     align-items: center;
     margin-top: toRem(100);
     gap: toRem(40);
-    margin-bottom: toRem(50);
-
-    &__header {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        gap: toRem(5);
-
-        &Heading {
-            color: $mainColor;
-            font-weight: 600;
-            letter-spacing: toRem(0.5);
-            font-size: toRem(28);
-        }
-
-        &Line {
-            height: 2px;
-            background-color: white;
-            width: 50%;
-        }
-    }
+    margin-bottom: toRem(90);
 
     &__boxes {
         display: flex;

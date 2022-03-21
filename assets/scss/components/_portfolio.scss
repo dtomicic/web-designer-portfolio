@@ -1,0 +1,75 @@
+.portfolio {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: toRem(40);
+    margin-bottom: toRem(70);
+
+    &__items {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: toRem(30);
+
+        &Box {
+            position: relative;
+            width: 85%;
+            max-width: toRem(320);
+
+            &Picture {
+                display: block;
+                width: 100%;
+                height: auto;
+                
+            }
+
+            &Overlay {
+                position: absolute;
+                top: 0;
+                bottom: 0;
+                left: 0;
+                right: 0;
+                height: 100%;
+                width: 100%;
+                opacity: 0;
+                transition: ease-in-out 0.4s;
+                background-color: $mainColor;
+            }
+
+            &:hover {
+                .portfolio__itemsBoxOverlay {
+                    opacity: 1;
+                    cursor: pointer;
+                }
+            }
+
+            &Text {
+                color: white;
+                font-size: toRem(24);
+                width: 85%;
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                text-align: center;
+
+                &Header {
+                    font-weight: 600;
+                    letter-spacing: toRem(1);
+                }
+            }
+        }
+    }
+}
+
+// Media queries
+
+@media (min-width: $breakMd) {
+    .portfolio__items {
+        flex-direction: row;
+        flex-wrap: wrap;
+        max-width: toRem(1224);
+        gap: toRem(80);
+    }
+}
