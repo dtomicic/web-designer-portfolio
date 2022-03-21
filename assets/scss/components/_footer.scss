@@ -1,0 +1,15 @@
+.footer {
+    display: flex;
+    flex-direction: column;
+    gap: toRem(20);
+    margin-top: toRem(60);
+    align-items: center;
+
+    &__copyright {
+        width: 100%;
+        color: white;
+        font-weight: 600;
+        font-size: toRem(16);
+        text-align: center;
+    }
+}

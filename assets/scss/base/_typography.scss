@@ -8,3 +8,7 @@ body {
   background-color: $bgColor;
   font-family: $mainFont;
 }
+
+html {
+  scroll-behavior: smooth;
+}
