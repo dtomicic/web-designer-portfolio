@@ -1,0 +1,124 @@
+.banner {
+    margin-top: toRem(135);
+    padding: 0 toRem(25);
+    display: flex;
+    flex-direction: column;
+
+    &__text {
+        display: flex;
+        flex-direction: column;
+    }
+
+    &__welcome {
+        color: $mainColor;
+        font-size: toRem(18);
+        margin-bottom: toRem(14);
+    }
+
+    &__iAm {
+        color: white;
+        font-size: toRem(22);
+        font-weight: 600;
+        margin-bottom: toRem(10);
+    }
+
+    &__paragraph {
+        color: white;
+        font-size: toRem(13);
+        max-width: 100%;
+        line-height: toRem(25);
+    }
+
+    &__textSocials {
+        display: flex;
+        gap: toRem(20);
+        margin-top: toRem(20);
+
+        &Link {
+            color: white;
+            display: flex;
+            text-decoration: none;
+            justify-content: center;
+            align-items: center;
+            width: toRem(35);
+            height: toRem(35);
+            border: 1px solid white;
+            border-radius: toRem(100);
+            transition: ease-in-out 0.3s;
+
+            &:hover {
+                cursor: pointer;
+                color: $mainColor;
+                border: 1px solid $mainColor;
+            }
+        }
+    }
+
+    &__picture {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        margin-top: toRem(50);
+
+        &Item {
+            width: 100%;
+            max-width: toRem(325);
+        }
+    }
+}
+
+.typed-cursor--blink {
+    display: none;
+}
+
+// Media queries
+
+@media(min-width: $breakMd) {
+    .banner {
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+
+        &__picture {
+            justify-content: center;
+        }
+    }   
+}
+
+@media (min-width: $breakLg) {
+    .banner {
+        padding: 0 toRem(80);
+
+        &__pictureItem {
+            max-width: toRem(380);
+        }
+    }
+}
+
+@media (min-width: $breakXl) {
+    .banner {
+        padding: 0 toRem(120);
+
+        &__pictureItem {
+            max-width: toRem(450);
+        }
+    }
+}
+
+@media (min-width: $breakXxl) {
+    .banner__welcome {
+        font-size: toRem(30);
+    }
+
+    .banner__iAm {
+        font-size: toRem(34);
+    }
+
+    .banner__paragraph {
+        font-size: toRem(17);
+    }
+
+    .banner__picture {
+       padding-left: toRem(300);
+    }
+}
