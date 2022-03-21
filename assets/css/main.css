@@ -556,6 +556,7 @@ body {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  margin: 2.5rem 0;
 }
 
 .numbers__items {
@@ -609,7 +610,6 @@ body {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
-    margin: 2.5rem 0;
   }
   .numbers__items {
     -webkit-box-orient: horizontal;
@@ -635,6 +635,94 @@ body {
   }
   .numbers__itemsBoxSubHeader {
     font-size: 1.375rem;
+  }
+}
+
+.contact {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 3.75rem 0 2.5rem 0;
+}
+
+.contact__form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin-top: 2.1875rem;
+  gap: 0.625rem;
+  width: 100%;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.contact__formItem {
+  font-family: "Poppins", sans-serif;
+  height: 2.1875rem;
+  background-color: transparent;
+  border: 1px solid white;
+  padding-left: 0.9375rem;
+  color: white;
+  -webkit-transition: ease-in-out 0.2s;
+  transition: ease-in-out 0.2s;
+  max-width: 21.25rem;
+  width: 100%;
+}
+
+.contact__formItem:focus {
+  outline: none;
+  border: 2px solid #ff4a57;
+}
+
+.contact__formItem:hover {
+  cursor: pointer;
+}
+
+.contact__formItem.textArea {
+  padding-top: 0.3125rem;
+  height: 6.25rem;
+}
+
+.contact__btn {
+  background-color: #ff4a57;
+  margin-top: 1.25rem;
+  padding: 0.625rem;
+  border-radius: 0.3125rem;
+  color: white;
+  -webkit-transition: ease-in-out 0.4s;
+  transition: ease-in-out 0.4s;
+  max-width: 7.5rem;
+}
+
+.contact__btn:hover {
+  cursor: pointer;
+  background-color: white;
+  color: #ff4a57;
+  -webkit-transform: scale(1.05);
+          transform: scale(1.05);
+}
+
+.contact__btnHeader {
+  font-weight: 600;
+  font-size: 0.8125rem;
+}
+
+@media (min-width: 1200px) {
+  .contact__formItem {
+    max-width: 40.625rem;
+    height: 3.125rem;
   }
 }
 /*# sourceMappingURL=main.css.map */
