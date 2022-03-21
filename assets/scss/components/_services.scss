@@ -1,0 +1,95 @@
+.services {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: toRem(100);
+    gap: toRem(40);
+    margin-bottom: toRem(50);
+
+    &__header {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: toRem(5);
+
+        &Heading {
+            color: $mainColor;
+            font-weight: 600;
+            letter-spacing: toRem(0.5);
+            font-size: toRem(28);
+        }
+
+        &Line {
+            height: 2px;
+            background-color: white;
+            width: 50%;
+        }
+    }
+
+    &__boxes {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        gap: toRem(30);
+
+        &Item {
+            background-color: rgb(248, 248, 248);
+            border-radius: toRem(10);
+            width: 85%;
+            display: flex;
+            flex-direction: column;
+            padding: toRem(30);
+            align-items: center;
+            gap: toRem(25);
+            box-shadow: 0 0 8px 2px rgba(0, 0, 0, 0.2);
+            transition: ease-in-out 0.4s;
+            max-width: toRem(320);
+
+            &:hover {
+                cursor: pointer;
+                background-color: $mainColor;
+                transform: scale(1.05);
+
+                .services__boxesItemIcon {
+                    color: rgb(248, 248, 248);
+                }
+
+                .services__boxesItemText {
+                    color: rgb(248, 248, 248);
+                }
+            }
+
+            &Icon {
+                font-size: toRem(40);
+                color: $mainColor;
+                transition: ease-in-out 0.4s;
+            }
+
+            &Text {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
+                gap: toRem(15);
+                transition: ease-in-out 0.4s;
+
+                &Paragraph {
+                    font-size: toRem(15);
+                }
+            }
+        }
+    }
+}
+
+// Media queries
+
+@media (min-width: $breakMd) {
+    .services__boxes {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        max-width: toRem(1330);
+        gap: toRem(80)
+    }
+}
